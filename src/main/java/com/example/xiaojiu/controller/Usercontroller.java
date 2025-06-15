@@ -52,7 +52,7 @@ public class Usercontroller {
     }
 
     @DeleteMapping("/{userId}")
-    public ResponseMessage delete(@PathVariable Integer userId) {
+    public ResponseMessage<Void> delete(@PathVariable Integer userId) {
         userService.deleteUser(userId);
         return ResponseMessage.success();
 
